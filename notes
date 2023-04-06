@@ -1,0 +1,62 @@
+-------------------------------------------------------------------------------------------------------------
+INCIDENT RESPONSE:
+-------------------------------------------------------------------------------------------------------------
+
+Introduction:
+
+    How to respond to incident or issue when occrs. 
+
+-------------------------------------------------------------------------------------------------------------
+
+Case study of hacked servers:
+
+    1. Never trust packaged software. Always download from the source. 
+            Ex: Docker images, AMI images.
+    2. Attacker redirects the URL to own website.
+    3. While visit website, download the malware script and compromise the visitor system.
+    4. Encrypt the folders and attacker ask for ransom to share decrypt key (ransomware).
+    
+    Commonly occur compromise:
+
+        Improper filewall configuration.
+        Lack of web application firewall.
+        Server hardening is must. 
+        File integrity monitoring is must.
+        Vulnarability assessment. 
+        Patch management. 
+        Always scan code.
+        Monitor for sudden open port and logs. 
+
+-------------------------------------------------------------------------------------------------------------
+
+AWS Abuse Reports:
+
+    It helps to find "within acceptable use policy (fair use policy)".
+    AWS sends abuse report to customers when their aws resources are being used for abusive purposes.
+    Abusive purposes includes, Use aws resources for 
+        denial of services
+        etc 
+    Once customer received abuse report, require to respond to email within 24 hrs else aws account will be blocked/suspended. 
+
+-------------------------------------------------------------------------------------------------------------
+
+AWS Guard Duty:
+
+    It is thread intelligence service. 
+    It monitors multiple log file like DNS logs, VPC flow logs , Cloud trail event logs etc. 
+    It gives findings with severities. 
+    NOTE: Guard duty will monitor only the Route53 for DNS logs. Active Directory DNS will not be monitored. 
+
+    Limitation:
+        It only consider route53 dns logs, vpc flow logs, cloud trail logs, eks audit logs, rds login activity logs. 
+        Other logs are cannot be considered.
+        To overcome this, can configure other threat detection intelligence.
+
+    Console:
+        Guard duty -> Enable 
+        Guard duty -> Settings -> Generate sample findings. 
+        
+-------------------------------------------------------------------------------------------------------------
+
+
+
