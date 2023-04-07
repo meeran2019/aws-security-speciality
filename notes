@@ -40,7 +40,7 @@ AWS Abuse Reports:
 
 -------------------------------------------------------------------------------------------------------------
 
-AWS Guard Duty:
+AWS GUARD DUTY:
 
     It is thread intelligence service. 
     It monitors multiple log file like DNS logs, VPC flow logs , Cloud trail event logs etc. 
@@ -55,6 +55,26 @@ AWS Guard Duty:
     Console:
         Guard duty -> Enable 
         Guard duty -> Settings -> Generate sample findings. 
+
+    Whitelisting alerts on Guardduty:
+        Trusted IP list - Guardduty doesnot generate findings for IP address on trusted IP lists. 
+        Use case: Doing penetration testing from security server , whitelist this IP address. 
+        Guardduty -> Lists -> 
+
+    Block IP address:
+        Threat list - List of IP address to block. 
+    
+    Suppress Findings:
+        Few findings can be suppressed from occur. 
+        Guardduty -> Findings - Suppress findings. 
+
+    Finding Type Lists:
+        https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html
+
+    Centralized Dashboard for Guardduty findings: 
+                
+
+
         
 -------------------------------------------------------------------------------------------------------------
 
