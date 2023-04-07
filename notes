@@ -72,11 +72,39 @@ AWS GUARD DUTY:
         https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html
 
     Centralized Dashboard for Guardduty findings: 
-                
-
-
+        In multi account, enabling and verify at each account is cumbersome process. 
+        Member Account 1 to n -> (Send findings) Master Account
+        From Master account, Guardduty -> Accounts -> Add accounts by invitation -> (Enter account id and email) 
+        From member account, Guardduty -> Accounts -> Accept Invitation. 
         
 -------------------------------------------------------------------------------------------------------------
 
+Incident Response: 
+
+    Incident is attempt or actual unauthorized access. 
+    Incident response is organized approach aftermath of incident. 
+    
+    Event driven security response: 
+        Based on events, triggers services like lambda which auto remediate. 
+
+    Preventive Services:
+        WAF, IAM, Network Firewall, KMS 
+
+    Detective Services:
+        Cloud trail, Cloud watch, Inspector, Detective. 
+        
+-------------------------------------------------------------------------------------------------------------
+
+Exposed aws access keys:
+
+    1. Determine the access associated with the access keys.
+    2. Invalidate the credential: 
+            Disable the credential - Recommended and retrieve. 
+            Delete the credential - Not recommended and not retrieved. 
+    3. Check and invalidate the temporary keys which still have access. 
+    4. Restore the credential with new credential.
+    5. Review the aws account.
+
+Compromised EC2 instance: 
 
 
